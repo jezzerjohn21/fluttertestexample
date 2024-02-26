@@ -18,4 +18,8 @@ void incrementCount(){
 void decrementCount(){
  _counter--;
 }
+
+void reset(){
+throw UnimplementedError();
+}
 }

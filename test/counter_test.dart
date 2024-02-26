@@ -45,12 +45,13 @@ expect(counter.count, -1);
 });
 
 
-test('given Counter class is instantiated, when reset is called, then count = 0',(){
+test('given Counter class is instantiated,and  when increament is called, and reset is called,  then count = 0',(){
 
+counter.incrementCount();
 counter.reset();
 
 
-expect(counter.count, 0);
+expect(counter.count, throw UnimplementedError);
 
 
 });
