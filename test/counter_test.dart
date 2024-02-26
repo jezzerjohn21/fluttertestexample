@@ -8,6 +8,7 @@ main() {
     counter = Counter();
   });
 
+  //INSTANTIATION
   group('Counter class', () {
     test('Given Counter class, when instantiated, them count = 0', () {
       counter = Counter();
@@ -16,6 +17,7 @@ main() {
       expect(count, 0);
     });
 
+    //INCREMENT
     group('Increment ', () {
       late Counter counter;
 
@@ -53,23 +55,32 @@ main() {
       });
     });
 
+    //DECREMENT
     group('Decrement', () {
       test(
-          'given Counter class is instantiated, when decrementCount is called, then count = -1',
+          'given Counter class is instantiated, when increment then decrementCount is called, then count = 0',
           () {
         counter.decrementCount();
 
-        expect(counter.count, -1);
+        expect(counter.count, 0);
+      });
+      test(
+          'given Counter class is instantiated, when decrementCount is called directly, then count = 0',
+          () {
+        counter.decrementCount();
+
+        expect(counter.count, 0);
       });
     });
-  });
 
-  test(
-      'given Counter class is instantiated,and  when increament is called, and reset is called,  then count = 0',
-      () {
-    counter.incrementCount();
-    counter.reset();
+    //RESET
+    test(
+        'given Counter class is instantiated,and  when increament is called, and reset is called,  then count = 0',
+        () {
+      counter.incrementCount();
+      counter.reset();
 
-    expect(counter.count, 0);
+      expect(counter.count, 0);
+    });
   });
 }
