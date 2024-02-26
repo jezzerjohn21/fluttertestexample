@@ -8,7 +8,14 @@ Counter(){
 
 int get count => _counter;  //getter
 
+
+
 void incrementCount(){
   _counter++;
+}
+
+
+void decrementCount(){
+ _counter--;
 }
 }
