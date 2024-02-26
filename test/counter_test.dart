@@ -11,8 +11,6 @@ main() {
  setUp(()=>
  counter = Counter());
   
-
-
   test('Given Counter class, when instantiated, them count = 0', () {
 //arrange
 
@@ -45,5 +43,18 @@ expect(counter.count, -1);
 });
 
 });
+
+
+test('given Counter class is instantiated, when reset is called, then count = 0',(){
+
+counter.reset();
+
+
+expect(counter.count, 0);
+
+
+});
+
+
 }
 
