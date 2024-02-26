@@ -38,7 +38,6 @@ main() {
         'Given Counter class is instantiated, when incrementCount is called twice, then count++',
         () {
           counter.incrementCount();
-          counter.incrementCount();
           expect(counter.count, 3);
         },
       );
@@ -47,8 +46,6 @@ main() {
         'Given Counter class is instantiated, when incrementCount is called twice, then count++',
         () {
           counter.incrementCount();
-          counter.incrementCount();
-          counter.incrementCount();
           expect(counter.count, 6);
         },
       );
@@ -56,9 +53,6 @@ main() {
       test(
         'Given Counter class is instantiated, when incrementCount is called twice, then count++',
         () {
-          counter.incrementCount();
-          counter.incrementCount();
-          counter.incrementCount();
           counter.incrementCount();
           expect(counter.count, 10);
         },
